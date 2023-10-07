@@ -1,130 +1,34 @@
-<div align="center">
-  <img height="60" src="https://edurev.gumlet.io/AllImages/original/ApplicationImages/CourseImages/944e5d47-8c55-4a89-91e5-22ab5f2798fc_CI.png">
-  <h1>MCQ TEST</h1>
-</div>
+# TENNIS-CLUB
 
-###### 1. Write the `correct answer` from the following options and give an explanation (2-5 lines).
+Live links:
 
-```javascript
-let greeting;
-greetign = {};
-console.log(greetign);
-```
+My website is made with different events of tennis.
 
-- A: `{}`
-- B: `ReferenceError: greetign is not defined`
-- C: `undefined`
+# 5 Project features?
 
-<details><summary><b>Answer</b></summary>
-<p>
+# Implement Private Routes:
 
-#### Answer: ?
+There are some routes in the Hero section of the website. If the user is not logged in to explore the preferred route, it should not be used. All those routes are controlled by private routes.
 
-<i>Write your explanation here</i>
+# Hero Section - Service Cards:
 
-</p>
-</details>
+In your Hero section, you have service-related cards with details. Ensure that these card details are hidden by default and are only visible to authenticated users.
+Hero section contains service section in that service section contains service related cards. The card has a button and clicking on the button will show the details of that service.
+But not everyone can see these details. Only those who are logged into the website will see it. And if any user wants to see the details of the service, he must go to Register From and register and then login.
 
-###### 2. Write the `correct answer` from the following options and give an explanation (2-5 lines).
+# User Authentication:
 
-```javascript
-function sum(a, b) {
-  return a + b;
-}
+Implement user authentication using a service like Firebase Authentication or any other authentication system of your choice. Allow users to register and log in.
+You can use JWT tokens or session cookies for maintaining user sessions.
 
-sum(1, "2");
-```
+# Registration and Login Forms:
 
-- A: `NaN`
-- B: `TypeError`
-- C: `"12"`
-- D: `3`
+But if someone has not logged in, then he must login. However, if the user wants to see details without logging in, he will be taken to the login page. And if the user logs in, he will be taken to the route he wanted to go.
 
-<details><summary><b>Answer</b></summary>
-<p>
+# Toasts for User Feedback:
 
-#### Answer: ?
+Show toasts or notifications to provide feedback to users when they log in without registering or when they successfully register and log in. You can use a library like react-toastify for this.
 
-<i>Write your explanation here</i>
+# Navbar - Show User State:
 
-</p>
-</details>
-
-###### 3. Write the `correct answer` from the following options and give an explanation (2-5 lines).
-
-```javascript
-const food = ["🍕", "🍫", "🥑", "🍔"];
-const info = { favoriteFood: food[0] };
-
-info.favoriteFood = "🍝";
-
-console.log(food);
-```
-
-- A: `['🍕', '🍫', '🥑', '🍔']`
-- B: `['🍝', '🍫', '🥑', '🍔']`
-- C: `['🍝', '🍕', '🍫', '🥑', '🍔']`
-- D: `ReferenceError`
-
-<details><summary><b>Answer</b></summary>
-<p>
-
-#### Answer: ?
-
-<i>Write your explanation here</i>
-
-</p>
-</details>
-
-###### 4. Write the `correct answer` from the following options and give an explanation (2-5 lines).
-
-```javascript
-function sayHi(name) {
-  return `Hi there, ${name}`;
-}
-
-console.log(sayHi());
-```
-
-- A: `Hi there,`
-- B: `Hi there, undefined`
-- C: `Hi there, null`
-- D: `ReferenceError`
-
-<details><summary><b>Answer</b></summary>
-<p>
-
-#### Answer: ?
-
-<i>Write your explanation here</i>
-
-</p>
-</details>
-
-###### 5. Write the `correct answer` from the following options and give an explanation (2-5 lines).
-
-```javascript
-let count = 0;
-const nums = [0, 1, 2, 3];
-
-nums.forEach((num) => {
-  if (num) count += 1;
-});
-
-console.log(count);
-```
-
-- A: 1
-- B: 2
-- C: 3
-- D: 4
-
-<details><summary><b>Answer</b></summary>
-<p>
-
-#### Answer: ?
-
-<i>Write your explanation here</i>
-
-</p>
-</details>
+Login and Register form is used on the website. A toast will be shown to the user when a user logs in without registering. And if registering then if logging then toast is shown to the user. Due to which the user can understand whether the logging is done or not. But if one of its icons in Navbar is user logging then Sign Out will show in Navbar. And if Login is not then Login will show.
