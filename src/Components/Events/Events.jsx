@@ -4,7 +4,11 @@ const Events = ({ events }) => {
   return (
     <div className="py-20">
       <div className="lg:flex justify-between items-center pb-10 px-8">
-        <div>
+        <div
+          data-aos="fade-right"
+          data-aos-duration="800"
+          data-aos-easing="ease-in-sine"
+        >
           <h4 className="uppercase  text-xl lg:text-2xl font-medium Poppins">
             Events
           </h4>
@@ -14,7 +18,12 @@ const Events = ({ events }) => {
           </h2>
         </div>
         <div>
-          <p className="lg:w-[500px] text-xl Poppins">
+          <p
+            className="lg:w-[500px] text-xl Poppins"
+            data-aos="zoom-out-left"
+            data-aos-duration="800"
+            data-aos-easing="ease-in-sine"
+          >
             The Wimbledon Championships is one of the oldest and most
             prestigious tennis tournaments in the world. It takes place annually
             at the All England Lawn Tennis and Croquet Club in London, England.

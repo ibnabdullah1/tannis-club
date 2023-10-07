@@ -6,8 +6,10 @@ const EventsCard = ({ event }) => {
 
   return (
     <div
-      data-aos="zoom-in-down"
       className="pointer hover:text-blue-500 border rounded-md p-5 "
+      data-aos="zoom-in-down"
+      data-aos-easing="linear"
+      data-aos-duration="1000"
     >
       <div>
         <img
