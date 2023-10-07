@@ -1,0 +1,9 @@
+.reviews-bg {
+  background-image: url("https://i.ibb.co/NnS9xSH/reviewsbg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.reviews-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}

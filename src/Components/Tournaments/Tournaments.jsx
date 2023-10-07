@@ -1,9 +1,9 @@
 import "./Tournaments.css";
 const Tournaments = () => {
   return (
-    <div>
-      <div className=" tournaments-bg ">
-        <div className="tournaments-overlay min-h-[80vh] flex justify-center items-center">
+    <div className="px-3">
+      <div className=" tournaments-bg rounded-md my-10 ">
+        <div className="tournaments-overlay rounded-md min-h-[80vh] flex justify-center items-center">
           <h3 className="font-semibold text-white my-3 text-6xl uppercase Barlow-Condensed ">
             World class Tournaments
           </h3>

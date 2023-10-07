@@ -11,13 +11,13 @@ const EventsCard = ({ event }) => {
     >
       <div>
         <img
-          className="overflow-hidden w-[130px]  rounded-t-md"
+          className="overflow-hidden w-[100px] lg:w-[130px]  rounded-t-md"
           src={image}
           alt={title}
         />
       </div>
       <div className="pl-3 py-3">
-        <h3 className="text-2xl font-semibold mt-2 Barlow-Condensed">
+        <h3 className="text-xl lg:text-2xl font-semibold mt-2 Barlow-Condensed">
           {title}
         </h3>
 

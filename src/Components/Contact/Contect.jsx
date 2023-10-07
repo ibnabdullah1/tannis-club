@@ -5,7 +5,7 @@ const Contact = () => {
         <section className="">
           <div className="flex justify-center">
             <div className="text-center md:max-w-xl lg:max-w-3xl">
-              <h2 className="mb-12 px-6 text-5xl font-bold Barlow-Condensed">
+              <h2 className="mb-12 px-6 text-5xl font-semibold Barlow-Condensed">
                 Contact us
               </h2>
             </div>

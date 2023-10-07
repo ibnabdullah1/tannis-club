@@ -5,13 +5,11 @@ import { Toaster } from "react-hot-toast";
 
 const MainLayout = () => {
   return (
-    <div>
-      <div className="max-w-6xl  mx-auto font-poppins">
-        <Navbar />
-        <div className="min-h-[70vh]">
-          <Outlet></Outlet>
-          <Toaster />
-        </div>
+    <div className="max-w-6xl  mx-auto font-poppins">
+      <Navbar />
+      <div className="min-h-[70vh]">
+        <Outlet></Outlet>
+        <Toaster />
       </div>
       <Footer />
     </div>

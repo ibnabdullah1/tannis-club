@@ -27,7 +27,7 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          to="/pages"
+          to="/blog"
           className={({ isActive, isPending }) =>
             isPending
               ? "pending"
@@ -36,7 +36,21 @@ const Navbar = () => {
               : ""
           }
         >
-          Pages
+          Blog
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/reviews"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? "text-blue-500  font-semibold "
+              : ""
+          }
+        >
+          Reviews
         </NavLink>
       </li>
       <li>
@@ -70,17 +84,14 @@ const Navbar = () => {
     </>
   );
 
-  const style = {
-    width: "100%",
-    backgroundColor: "white",
-    top: "0",
-    position: "sticky",
-  };
+  // const style = {
+  //   width: "100%",
+  //   backgroundColor: "white",
+  //   top: "0",
+  //   position: "fixed",
+  // };
   return (
-    <div
-      style={style}
-      className=" flex justify-between items-center py-3 px-3 shadow  max-w-6xl   mx-auto"
-    >
+    <div className=" flex justify-between items-center py-3 px-3 shadow  max-w-6xl   mx-auto">
       <div className="navbar lg:hidden">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -108,18 +119,20 @@ const Navbar = () => {
         </div>
         <div>
           <img
-            className="w-[80px] h-auto"
-            src="https://i.ibb.co/3dZZk6D/logo.png"
+            className="w-[40px] h-auto"
+            src="https://www.svgrepo.com/show/487884/tennis.svg"
             alt=""
           />
+          <h1 className="text-2xl font-bold Barlow-Condensed">Tennis club</h1>
         </div>
       </div>
-      <div className=" hidden lg:flex">
+      <div className=" hidden justify-center items-center  lg:flex">
         <img
-          className="w-[100px] h-auto"
-          src="https://i.ibb.co/3dZZk6D/logo.png"
+          className="w-[40px] h-auto"
+          src="https://www.svgrepo.com/show/487884/tennis.svg"
           alt=""
         />
+        <h1 className="text-2xl font-bold Barlow-Condensed">Tennis club</h1>
       </div>
       <div className=" hidden lg:flex">
         <ul className="px-1 text-lg flex  gap-8">{navLinks}</ul>

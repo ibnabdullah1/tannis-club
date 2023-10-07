@@ -1,0 +1,9 @@
+.Blog-bg {
+  background-image: url("https://i.ibb.co/HDcZFf1/gallerybg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.Blog-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
