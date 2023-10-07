@@ -2,7 +2,7 @@
 
 # live link
 
-https://tennis-club.surge.sh/
+https://tennis-club-f254e.web.app/
 
 # 5 Project features?
 

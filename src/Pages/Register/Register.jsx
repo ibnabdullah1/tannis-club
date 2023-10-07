@@ -1,18 +1,20 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
-
+import toast from "react-hot-toast";
 const Register = () => {
   const [error, setError] = useState("");
 
-  const { createUser } = useContext(AuthContext);
+  const { createUser, handleUpdateProfile } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleRegister = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-
-    console.log(email, password);
+    const name = e.target.name.value;
+    const img = e.target.img.value;
+    console.log(email, password, name, img);
     setError("");
     if (
       password.length < 6 ||
@@ -26,12 +28,16 @@ const Register = () => {
       setError("");
     }
 
+    // creating a new user
     createUser(email, password)
-      .then((res) => {
-        console.log(res.user);
+      .then(() => {
+        handleUpdateProfile(name, img).then(() => {
+          toast.success("User created successfully");
+          navigate("/");
+        });
       })
-      .catch((err) => {
-        setError(err.message);
+      .catch((error) => {
+        toast.error(error.message);
       });
   };
 
