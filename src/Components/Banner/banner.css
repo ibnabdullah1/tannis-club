@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+.banner-bg {
+  background-image: url("https://www.usta.com/content/dam/usta/Articles/article-primary/18297_C_NY_20_Social_ZoomBackgrounds_Ashe.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.banner-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.Barlow-Condensed {
+  font-family: "Barlow Condensed", sans-serif;
+}
+.Poppins {
+  font-family: "Poppins", sans-serif;
+}
