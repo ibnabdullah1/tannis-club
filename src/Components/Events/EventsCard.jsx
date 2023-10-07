@@ -1,10 +1,14 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import { BsArrowRight } from "react-icons/bs";
 const EventsCard = ({ event }) => {
   const { id, title, image } = event;
 
   return (
-    <div data-aos="zoom-in-down" className="pointer border rounded-md p-5 ">
+    <div
+      data-aos="zoom-in-down"
+      className="pointer hover:text-blue-500 border rounded-md p-5 "
+    >
       <div>
         <img
           className="overflow-hidden w-[130px]  rounded-t-md"
@@ -30,4 +34,11 @@ const EventsCard = ({ event }) => {
   );
 };
 
+EventsCard.propTypes = {
+  event: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+  }).isRequired,
+};
 export default EventsCard;

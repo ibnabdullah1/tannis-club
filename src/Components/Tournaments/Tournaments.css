@@ -1,0 +1,9 @@
+.tournaments-bg {
+  background-image: url("https://i.ibb.co/HgD7b8K/311cba7b7162fe45.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.tournaments-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}

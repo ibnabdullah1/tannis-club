@@ -14,8 +14,6 @@ const EventsDetails = () => {
     setEventDetails(findSpecificItem);
   }, [id, cardItems]);
 
-  console.log(eventDetails);
-
   if (!eventDetails) {
     return null;
   }

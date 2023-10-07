@@ -1,6 +1,14 @@
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
+import { useContext } from "react";
 
 const Navbar = () => {
+  const { user, logout } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    return logout();
+  };
+
   const navLinks = (
     <>
       <li>
@@ -10,7 +18,7 @@ const Navbar = () => {
             isPending
               ? "pending"
               : isActive
-              ? "text-[#F9A51A] font-semibold "
+              ? "text-blue-500  font-semibold "
               : ""
           }
         >
@@ -19,44 +27,30 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          to="/news"
+          to="/pages"
           className={({ isActive, isPending }) =>
             isPending
               ? "pending"
               : isActive
-              ? "text-[#F9A51A] font-semibold "
+              ? "text-blue-500  font-semibold "
               : ""
           }
         >
-          News
+          Pages
         </NavLink>
       </li>
       <li>
         <NavLink
-          to="/blog"
+          to="/events"
           className={({ isActive, isPending }) =>
             isPending
               ? "pending"
               : isActive
-              ? "text-[#F9A51A] font-semibold "
+              ? "text-blue-500  font-semibold "
               : ""
           }
         >
-          Blog
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to="/destination"
-          className={({ isActive, isPending }) =>
-            isPending
-              ? "pending"
-              : isActive
-              ? "text-[#F9A51A] font-semibold "
-              : ""
-          }
-        >
-          Destination
+          Events
         </NavLink>
       </li>
       <li>
@@ -66,7 +60,7 @@ const Navbar = () => {
             isPending
               ? "pending"
               : isActive
-              ? "text-[#F9A51A] font-semibold "
+              ? "text-blue-500 font-semibold "
               : ""
           }
         >
@@ -76,8 +70,17 @@ const Navbar = () => {
     </>
   );
 
+  const style = {
+    width: "100%",
+    backgroundColor: "white",
+    top: "0",
+    position: "sticky",
+  };
   return (
-    <div className=" flex justify-between items-center py-5  max-w-6xl   mx-auto">
+    <div
+      style={style}
+      className=" flex justify-between items-center py-3 px-3 shadow  max-w-6xl   mx-auto"
+    >
       <div className="navbar lg:hidden">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -122,11 +125,20 @@ const Navbar = () => {
         <ul className="px-1 text-lg flex  gap-8">{navLinks}</ul>
       </div>
 
-      <Link to="/login">
-        <button className=" text-white bg-[#F9A51A] py-2 px-4 font-semibold">
-          Login
+      {user ? (
+        <button
+          onClick={handleLogOut}
+          className="bg-blue-500 uppercase text-white font-semibold py-2 px-4 rounded"
+        >
+          Sign Out
         </button>
-      </Link>
+      ) : (
+        <Link to="/login">
+          <button className="bg-blue-500 uppercase text-white font-semibold py-2 px-4 rounded">
+            Login
+          </button>
+        </Link>
+      )}
     </div>
   );
 };

@@ -8,7 +8,6 @@ const Login = () => {
   console.log(location);
   const navigate = useNavigate();
   const { signIn } = useContext(AuthContext);
-  const [user, setUser] = useState("");
   const [error, setError] = useState("");
 
   const handleLogin = (e) => {
@@ -18,12 +17,13 @@ const Login = () => {
     const password = form.get("password");
 
     signIn(email, password)
-      .then((result) => {
-        setUser(result.user);
+      .then(() => {
+        toast.success(" Your Logged Successfully");
         navigate(location?.state ? location.state : "/");
       })
-      .catch((err) => setError(err.message));
-    setUser("");
+      .catch((err) => {
+        setError(err.message);
+      });
     setError("");
   };
 
@@ -66,11 +66,6 @@ const Login = () => {
             <button className="bg-[#403F3F] mb-6 rounded-md w-full flex justify-center items-center text-white font-medium py-2 ">
               Login
             </button>
-            {user && (
-              <p className="text-green-600  font-medium text-center ">
-                Created user Successfully
-              </p>
-            )}
 
             <p className="text-red-500 font-medium text-center"> {error}</p>
 

@@ -5,6 +5,9 @@ import Login from "../Pages/Login/Login";
 import Home from "../Components/Home/Home";
 import Events from "../Components/Events/Events";
 import EventsDetails from "../Components/Events/EventsDetails";
+import Contact from "../Components/Contact/Contect";
+import Tournaments from "../Components/Tournaments/Tournaments";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -18,12 +21,24 @@ const router = createBrowserRouter([
       },
       {
         path: "/:id",
-        element: <EventsDetails />,
+        element: (
+          <PrivateRoute>
+            <EventsDetails />
+          </PrivateRoute>
+        ),
         loader: () => fetch("/tennis.json"),
       },
       {
         path: "/events",
-        element: <Events />,
+        element: (
+          <PrivateRoute>
+            <Tournaments />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
       },
 
       {

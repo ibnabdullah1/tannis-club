@@ -9,12 +9,10 @@ const Register = () => {
 
   const handleRegister = (e) => {
     e.preventDefault();
-    const form = new FormData(e.currentTarget);
-    // const name = form.get("name");
-    // const img = form.get("img");
-    const email = form.get("email");
-    const password = form.get("password");
-    // console.log(name, img, email, password);
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    const img = e.target.img.value;
     createUser(email, password)
       .then((res) => {
         console.log(res.user);
@@ -22,7 +20,7 @@ const Register = () => {
       .catch((err) => {
         setError(err.message);
       });
-    setError("");
+    // setError("");
     // signIn(email, password)
     //     .then(result => {
     //         console.log(result.user);

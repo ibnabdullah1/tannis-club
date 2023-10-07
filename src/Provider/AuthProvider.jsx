@@ -1,6 +1,7 @@
 import {
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
+  onAuthStateChanged,
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
@@ -35,23 +36,23 @@ const AuthProvider = ({ children }) => {
     return signOut(auth);
   };
 
-  //   useEffect(() => {
-  //     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
-  //       console.log("user in the auth state changed", currentUser);
-  //       setUser(currentUser);
-  //       setLoading(false);
-  //     });
-  //     return () => {
-  //       unSubscribe();
-  //     };
-  //   }, []);
+  useEffect(() => {
+    const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+      console.log("user in the auth state changed", currentUser);
+      setUser(currentUser);
+      setLoading(false);
+    });
+    return () => {
+      unSubscribe();
+    };
+  }, []);
 
   const authInfo = {
     createUser,
     signIn,
     user,
-    signInWithGoogle,
     logout,
+    signInWithGoogle,
     loading,
   };
 
