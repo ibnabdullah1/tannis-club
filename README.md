@@ -1,8 +1,6 @@
 # TENNIS-CLUB
 
-Live links:
-
-My website is made with different events of tennis.
+# Live links:
 
 # 5 Project features?
 
